@@ -15,7 +15,7 @@ I'd use Discord in my browser of choice, but it doesn't run correctly.
 
 On Debian, discord-player depends on the following packages:
 
-    qmake qtbase5-dev qt5-default qtwebengine5-dev
+    qt5-qmake qtbase5-dev qt5-default qtwebengine5-dev
 
 To build, just run:
 
