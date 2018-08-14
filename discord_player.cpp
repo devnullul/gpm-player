@@ -44,8 +44,3 @@ void discord_player::on_webEngineView_iconChanged(const QIcon &arg1)
 {
     setWindowIcon(arg1);
 }
-
-void discord_player::on_webEngineView_urlChanged(const QUrl &arg1)
-{
-    //std::cout << arg1.toString().toStdString() << std::endl;
-}
