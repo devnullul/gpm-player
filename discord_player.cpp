@@ -18,7 +18,7 @@ discord_player::discord_player(QWidget *parent) :
 
     connect(ui->webEngineView->page(),
             SIGNAL(featurePermissionRequested(const QUrl&, QWebEnginePage::Feature)),
-            SLOT(on_webEngineView_permissionRequested(const QUrl&, QWebEnginePage::Feature)));
+            SLOT(featurePermissionRequested(const QUrl&, QWebEnginePage::Feature)));
 
     ui->webEngineView->setUrl(QUrl("https://discordapp.com/channels/@me"));
 }
@@ -28,7 +28,7 @@ discord_player::~discord_player()
     delete ui;
 }
 
-void discord_player::on_webEngineView_permissionRequested(const QUrl& q, QWebEnginePage::Feature f) {
+void discord_player::featurePermissionRequested(const QUrl& q, QWebEnginePage::Feature f) {
     qDebug() << q << f;
 
     ui->webEngineView->page()->setFeaturePermission(q, f,

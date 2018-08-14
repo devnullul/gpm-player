@@ -25,7 +25,7 @@ private slots:
 
     void on_webEngineView_urlChanged(const QUrl &arg1);
 
-    void on_webEngineView_permissionRequested(const QUrl &q, QWebEnginePage::Feature f);
+    void featurePermissionRequested(const QUrl &q, QWebEnginePage::Feature f);
 
 private:
     Ui::discord_player *ui;
