@@ -11,7 +11,6 @@ discord_player::discord_player(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    setStyleSheet("background-color: black;");
     showMaximized();
 
     ui->webEngineView->setUrl(QUrl("https://discordapp.com/channels/@me"));
