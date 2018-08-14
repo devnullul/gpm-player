@@ -1,2 +1,0 @@
-# discord-player
-Plays discord.
