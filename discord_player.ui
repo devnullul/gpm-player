@@ -10,17 +10,8 @@
     <height>768</height>
    </rect>
   </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
   <property name="windowTitle">
    <string>Discord Player</string>
-  </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -49,7 +40,4 @@
  </customwidgets>
  <resources/>
  <connections/>
- <slots>
-  <slot>titleChanged(QString)</slot>
- </slots>
 </ui>
