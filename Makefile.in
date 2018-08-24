@@ -1,6 +1,6 @@
-PREFIX=/usr/local
+PREFIX = @@prefix@@
 
-.PHONY: all clean install
+.PHONY: all clean install uninstall
 
 all:
 	mkdir -p build && cd build && qmake ../discord-player.pro -spec linux-g++
@@ -12,3 +12,6 @@ clean:
 install:
 	mkdir -p ${PREFIX}/bin
 	cp build/discord-player ${PREFIX}/bin
+
+uninstall:
+	rm -f ${PREFIX}/bin/discord-player
