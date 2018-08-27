@@ -10,18 +10,25 @@ Because the official client is proprietary and slow for me, and it does stuff in
 background that hogs my machine :(
 I'd use Discord in my browser of choice, but it doesn't run correctly.
 
- How to build
-==============
+ Build dependencies
+====================
+
+ -- Debian and Ubuntu --
 
 On Debian and Ubuntu, discord-player depends on the following packages:
 
     build-essential qt5-qmake qtbase5-dev qt5-default qtwebengine5-dev
+
+ -- Arch --
 
 On Arch, it depends on qt5, which can be installed with:
 
     sudo pacman -S qt5
 
 Then install all selections.
+
+ How to build
+==============
 
 To configure the package, use the ./configure script:
 
