@@ -1,6 +1,6 @@
 PREFIX = @@prefix@@
 
-.PHONY: all clean install uninstall
+.PHONY: all clean install uninstall distclean dist-clean
 
 all:
 	mkdir -p build && cd build && qmake ../discord-player.pro -spec linux-g++
@@ -15,3 +15,8 @@ install:
 
 uninstall:
 	rm -f ${PREFIX}/bin/discord-player
+
+distclean: clean
+	rm Makefile
+
+dist-clean: distclean

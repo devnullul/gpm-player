@@ -2,7 +2,7 @@
 #define DISCORD_PLAYER_H
 
 #include <QMainWindow>
-#include <QtWebEngineWidgets/QWebEnginePage>
+#include <QWebEngineView>
 
 namespace Ui {
 class discord_player;
@@ -21,7 +21,7 @@ private slots:
 
     void on_webEngineView_iconChanged(const QIcon &arg1);
 
-    void featurePermissionRequested(const QUrl &q, QWebEnginePage::Feature f);
+    void grantFeaturePermission(const QUrl &q, QWebEnginePage::Feature f);
 
 private:
     Ui::discord_player *ui;

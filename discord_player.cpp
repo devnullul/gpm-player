@@ -1,13 +1,6 @@
 #include "discord_player.h"
 #include "ui_discord_player.h"
 
-#include <QtWebEngineCore>
-#include <QtWebEngineWidgets/QWebEnginePage>
-
-//#include <QDesktopServices>
-
-//#include <iostream>
-
 discord_player::discord_player(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::discord_player)
@@ -17,8 +10,9 @@ discord_player::discord_player(QWidget *parent) :
     showMaximized();
 
     connect(ui->webEngineView->page(),
-            SIGNAL(featurePermissionRequested(const QUrl&, QWebEnginePage::Feature)),
-            SLOT(featurePermissionRequested(const QUrl&, QWebEnginePage::Feature)));
+            SIGNAL(featurePermissionRequested(const QUrl &, QWebEnginePage::Feature)),
+            this,
+            SLOT(grantFeaturePermission(const QUrl &, QWebEnginePage::Feature)));
 
     ui->webEngineView->setUrl(QUrl("https://discordapp.com/channels/@me"));
 }
@@ -28,7 +22,7 @@ discord_player::~discord_player()
     delete ui;
 }
 
-void discord_player::featurePermissionRequested(const QUrl& q, QWebEnginePage::Feature f) {
+void discord_player::grantFeaturePermission(const QUrl &q, QWebEnginePage::Feature f) {
     qDebug() << q << f;
 
     ui->webEngineView->page()->setFeaturePermission(q, f,
