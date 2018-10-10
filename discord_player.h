@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QWebEngineView>
+#include <QMessageBox>
 
 namespace Ui {
 class discord_player;
