@@ -8,7 +8,7 @@ QT       += core gui webenginewidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = discord-player
+TARGET = gpm-player
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,10 +25,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        discord_player.cpp
+        gpm_player.cpp
 
 HEADERS += \
-        discord_player.h
+        gpm_player.h
 
 FORMS += \
-        discord_player.ui
+        gpm_player.ui
