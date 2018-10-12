@@ -44,19 +44,19 @@ On Fedora, the `qmake` binary has a different name than on most distributions (w
 
 To configure the package, use the ./configure script:
 
-    `./configure`
+    ./configure
 
 Or, if you want to specify a custom prefix:
 
-    `./configure --prefix=/my/custom/path`
+    ./configure --prefix=/my/custom/path
 
 To build, just run:
 
-    `make`
+    make
 
 To install it run:
 
-    `make install`
+    make install
 
 (or `sudo make install` if you need admin privileges)
 
