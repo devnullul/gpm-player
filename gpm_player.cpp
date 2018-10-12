@@ -1,9 +1,9 @@
-#include "discord_player.h"
-#include "ui_discord_player.h"
+#include "gpm_player.h"
+#include "ui_gpm_player.h"
 
-discord_player::discord_player(QWidget *parent) :
+gpm_player::gpm_player(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::discord_player)
+    ui(new Ui::gpm_player)
 {
     ui->setupUi(this);
 
@@ -14,15 +14,15 @@ discord_player::discord_player(QWidget *parent) :
             this,
             SLOT(grantFeaturePermission(const QUrl &, QWebEnginePage::Feature)));
 
-    ui->webEngineView->setUrl(QUrl("https://discordapp.com/channels/@me"));
+    ui->webEngineView->setUrl(QUrl("https://play.google.com/music/listen#/home"));
 }
 
-discord_player::~discord_player()
+gpm_player::~gpm_player()
 {
     delete ui;
 }
 
-void discord_player::grantFeaturePermission(const QUrl &q, QWebEnginePage::Feature f) {
+void gpm_player::grantFeaturePermission(const QUrl &q, QWebEnginePage::Feature f) {
     qDebug() << q << f;
 
     QString s;
@@ -42,12 +42,12 @@ void discord_player::grantFeaturePermission(const QUrl &q, QWebEnginePage::Featu
     }
 }
 
-void discord_player::on_webEngineView_titleChanged(const QString &title)
+void gpm_player::on_webEngineView_titleChanged(const QString &title)
 {
     setWindowTitle(title);
 }
 
-void discord_player::on_webEngineView_iconChanged(const QIcon &arg1)
+void gpm_player::on_webEngineView_iconChanged(const QIcon &arg1)
 {
     setWindowIcon(arg1);
 }
