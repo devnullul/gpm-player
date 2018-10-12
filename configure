@@ -12,11 +12,11 @@ for i in "$@"; do
 			;;
 		--help | -h)
 cat <<EOF
-discord-player configuration program.
+gpm-player configuration program.
 
 Available options:
 
-    --prefix=PATH      Specifies the path where discord-player will be
+    --prefix=PATH      Specifies the path where gpm-player will be
                        installed to.
                        (default: /usr/local)
 

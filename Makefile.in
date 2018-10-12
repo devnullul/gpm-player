@@ -3,7 +3,7 @@ PREFIX = @@prefix@@
 .PHONY: all clean install uninstall distclean dist-clean
 
 all:
-	mkdir -p build && cd build && qmake ../discord-player.pro -spec linux-g++
+	mkdir -p build && cd build && qmake ../gpm-player.pro -spec linux-g++
 	make -C build
 
 clean:
@@ -11,10 +11,12 @@ clean:
 
 install:
 	mkdir -p ${PREFIX}/bin
-	cp build/discord-player ${PREFIX}/bin
+	cp build/gpm-player ${PREFIX}/bin
+	cp gpm-player.icon /usr/share/icons
+	cp gpm-player.desktop /usr/share/applications
 
 uninstall:
-	rm -f ${PREFIX}/bin/discord-player
+	rm -f ${PREFIX}/bin/gpm-player
 
 distclean: clean
 	rm Makefile
