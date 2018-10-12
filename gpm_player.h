@@ -1,21 +1,21 @@
-#ifndef DISCORD_PLAYER_H
-#define DISCORD_PLAYER_H
+#ifndef GPM_PLAYER_H
+#define GPM_PLAYER_H
 
 #include <QMainWindow>
 #include <QWebEngineView>
 #include <QMessageBox>
 
 namespace Ui {
-class discord_player;
+class gpm_player;
 }
 
-class discord_player : public QMainWindow
+class gpm_player : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit discord_player(QWidget *parent = 0);
-    ~discord_player();
+    explicit gpm_player(QWidget *parent = 0);
+    ~gpm_player();
 
 private slots:
     void on_webEngineView_titleChanged(const QString &title);
@@ -25,7 +25,7 @@ private slots:
     void grantFeaturePermission(const QUrl &q, QWebEnginePage::Feature f);
 
 private:
-    Ui::discord_player *ui;
+    Ui::gpm_player *ui;
 };
 
-#endif // DISCORD_PLAYER_H
+#endif // GPM_PLAYER_H
