@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>discord_player</class>
- <widget class="QMainWindow" name="discord_player">
+ <class>gpm_player</class>
+ <widget class="QMainWindow" name="gpm_player">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Discord Player</string>
+   <string>GPM Player</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
